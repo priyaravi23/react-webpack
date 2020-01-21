@@ -2,7 +2,7 @@
 
 - Run `npm init`
 - Install webpack and create a default bundle
-`npm instal --save-dev webpack webpack-cli`
+  `npm instal --save-dev webpack webpack-cli`
 - To run webpack in prod mode `npm run build`
 - To run webpack in dev mode `npm run dev`
 - To run tests `npm test`
@@ -56,9 +56,11 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html'
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ]
 }
 ```
 
@@ -91,16 +93,18 @@ module.exports = merge(baseConfig, {
 
 ```javascript
 const merge = require('webpack-merge')
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const baseConfig = require('./webpack.config.base')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  plugins: [new BundleAnalyzerPlugin({
-    analyzerMode: 'static',
-    openAnalyzer: false,
-    reportFilename: 'bundle_sizes.html'
-  })],
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+      reportFilename: 'bundle_sizes.html'
+    })
+  ],
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM'
@@ -112,3 +116,4 @@ module.exports = merge(baseConfig, {
 - Asynchronously Load webpack Bundles through Code-splitting and React Suspense
 - Set Up Tests that Render a React Component with Jest and Babel
 - Configure Prettier to Automatically Format Code
+- Avoid Common JavaScript Errors with ESLint
