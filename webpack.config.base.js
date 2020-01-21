@@ -1,8 +1,7 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'production',  // use 'development' for a non-minified version
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'dist'),

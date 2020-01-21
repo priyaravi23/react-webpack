@@ -4,8 +4,9 @@
   "description": "Modern Javascript Tooling with React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack --watch --config webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Priya Ravi",
   "license": "ISC",
