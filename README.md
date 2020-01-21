@@ -105,3 +105,5 @@ module.exports = merge(baseConfig, {
   }
 })
 ```
+
+- Target specific browsers with babel-preset-env and the babel pollyfill
