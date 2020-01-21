@@ -5,6 +5,7 @@
 `npm instal --save-dev webpack webpack-cli`
 - To run webpack in prod mode `npm run build`
 - To run webpack in dev mode `npm run dev`
+- To run tests `npm test`
 - Explicitly Define an Entry Point with a webpack Configuration File
 - Control the Output of webpack with the mode Setting
 
@@ -107,3 +108,5 @@ module.exports = merge(baseConfig, {
 ```
 
 - Target specific browsers with babel-preset-env and the babel pollyfill
+- Asynchronously Load webpack Bundles through Code-splitting and React Suspense
+- Set Up Tests that Render a React Component with Jest and Babel
