@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'production',  // use 'development' for a non-minified version
@@ -18,5 +19,8 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    plugins: [new HtmlWebpackPlugin({
+        template: './src/index.html'
+    })]
 };
