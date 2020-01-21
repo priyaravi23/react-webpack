@@ -4,4 +4,4 @@ import App from './App'
 import '@babel/polyfill'
 import './styles.css'
 
-ReactDOM.render(<App/>, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
